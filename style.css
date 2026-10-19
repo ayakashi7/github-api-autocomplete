@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "TText";
+  src: url(../github-api-autocomplete/TTexT/TTLakesCompressed-ExtraLightItalic.ttf);
+  font-weight: 500;
+}
+
+body {
+  background-image: url(olala.png);
+  background-repeat: no-repeat;
+  /* background-size: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.main-container {
+  width: 500px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 100px;
+}
+.search-gold {
+  position: relative;
+  width: 100%;
+}
+#gnomik {
+  width: 100%;
+  height: 80px;
+  font-size: 25px;
+  padding: 0 20px;
+
+  border-radius: 60px;
+  outline: none;
+  background: rgba(18, 14, 10, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 15px rgba(214, 182, 76, 0.814),
+    inset 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  border-radius: 30px;
+  outline: none;
+}
+#gnomik:focus {
+  border-color: rgba(240, 218, 54, 0.9);
+  box-shadow:
+    0 0 25px rgba(237, 212, 75, 0.756),
+    inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+#gnomik::placeholder {
+  color: rgba(212, 175, 55, 0.5);
+  font-family: "TText";
+}
+.autocomplete {
+  position: absolute;
+  top: calc(100% + 8px); /* Небольшой отступ вниз от инпута */
+  left: 0;
+  width: 100%;
+  background: transparent;
+  border: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+}
+.autocomplete li {
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #e6d5ac;
+  font-family: "TText";
+  background: rgba(22, 17, 12, 0.85);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.autocomplete li:hover {
+  background: rgba(45, 35, 22, 0.9);
+  border-color: rgba(255, 217, 0, 0.675);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.25);
+}
+.repo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}

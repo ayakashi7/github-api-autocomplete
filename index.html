@@ -7,15 +7,17 @@
     <title>GNOMIKI GOLD SEARCH</title>
   </head>
   <body>
-    <div class="main-comtainer">
+    <div class="main-container">
       <div class="search-gold">
         <input
           type="text"
           id="gnomik"
           autocomplete="off"
-          placeholder="Введите название репозитория..."
+          placeholder="Search your gold..."
         />
+        <ul id="autocomplete" class="autocomplete"></ul>
       </div>
+      <ul id="repo-list" class="repo-list"></ul>
     </div>
     <script src="script.js" type="text/javascript"></script>
   </body>
